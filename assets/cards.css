@@ -1,0 +1,64 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+#cards article {
+  width: 200px;
+  border: 1px solid black;
+  padding: 0 1em;
+  border-radius: 20px;
+  background-color: rgb(82, 82, 82);
+  color: white;
+  /* stili da mobile */
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s linear 0s, background-color 0.3s linear 0s,
+    color 0.3s linear 0s;
+}
+
+#cards article div {
+  overflow: scroll;
+  height: 100%;
+}
+
+#cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+#card-1 {
+  transform: rotate(-15deg) translate(50px, 40px);
+  z-index: 1;
+}
+
+#card-1:hover,
+#card-2:hover,
+#card-3:hover {
+  transform: scale(1.25);
+  z-index: 4; /* questo lo voglio senza transition */
+  background-color: goldenrod;
+  color: black;
+}
+
+#card-2 {
+  z-index: 2;
+}
+
+#card-3 {
+  z-index: 3;
+  transform: rotate(15deg) translate(-50px, 40px);
+}
+
+@media screen and (min-width: 576px) {
+  #cards article {
+    height: auto;
+  }
+  #cards article div {
+    overflow: auto;
+  }
+}
