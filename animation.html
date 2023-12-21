@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Animations</title>
+    <link rel="stylesheet" href="./assets/animation.css" />
+  </head>
+  <body>
+    <main>
+      <h1>ANIMAZIONI IN CSS</h1>
+      <h3>Box che cambia colore all'infinito</h3>
+      <div class="box change-color"></div>
+      <h3>Box che si sposta all'infinito</h3>
+      <div class="box box-2 change-position"></div>
+      <h3>Box che si sposta e si resetta una volta premuto il bottone</h3>
+      <button onclick="startStop()">START/STOP</button>
+      <div class="box" id="moving-box"></div>
+      <h3>Box che si sposta e si pausa una volta premuto il bottone</h3>
+      <button onclick="startStop2()">START/STOP</button>
+      <div
+        class="box box-button"
+        style="animation-play-state: paused"
+        id="moving-box2"
+      ></div>
+    </main>
+    <script>
+      const startStop = function () {
+        // viene eseguita ad ogni click del bottone
+        // qui dentro dovrò selezionare il box da far partire
+        const movingBox = document.getElementById('moving-box')
+        // uso toggle così la classe "box-button" viene INSERITA nelle classi di movingBox qualora non ci sia già, e venga TOLTA qualora sia stata già inserita con un precedente click
+        movingBox.classList.toggle('box-button')
+      }
+
+      const startStop2 = function () {
+        // viene eseguita ad ogni click del bottone
+        // qui dentro dovrò selezionare il box da far partire
+        const movingBox = document.getElementById('moving-box2')
+        // uso toggle così la classe "box-button" viene INSERITA nelle classi di movingBox qualora non ci sia già, e venga TOLTA qualora sia stata già inserita con un precedente click
+        if (movingBox.style.animationPlayState === 'paused') {
+          movingBox.style.animationPlayState = 'running'
+        } else {
+          movingBox.style.animationPlayState = 'paused'
+        }
+      }
+    </script>
+  </body>
+</html>
