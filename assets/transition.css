@@ -1,0 +1,89 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box-1 {
+  background-color: red;
+  color: white;
+  /* applico transition */
+  /* transition: nomeProprietà durata curvaDiAccelerazione ritardo */
+  transition: width 2s ease-in 0s;
+}
+
+.box-1:hover {
+  width: 100%;
+}
+
+.box-2 {
+  background-color: cyan;
+  transition: background-color 3s linear 0s;
+}
+
+.box-2:hover {
+  background-color: orange;
+}
+
+.box-3 {
+  background-color: black;
+  color: white;
+  font-size: 1em;
+  transition: font-size 2s cubic-bezier(0.22, 0.91, 0.77, -0.3) 0s;
+}
+
+.box-3:hover {
+  font-size: 3em;
+}
+
+.box-pazzo {
+  background-color: green;
+  transition: all 1s linear 0s;
+}
+
+.box-pazzo:hover {
+  background-color: blue;
+  transform: translateX(400px) rotate(921deg);
+}
+
+.box-5 {
+  background-color: red;
+  color: white;
+  transition: width 0.5s cubic-bezier(0.22, 0.91, 0.77, -0.3) 0s;
+  /* quetsa ora diventa la transizione IN USCITA */
+}
+
+.box-5:hover {
+  width: 500px;
+  transition: width 2s linear 0s;
+  /* questa ora diventa la transizione IN ENTRATA */
+}
+
+/* quindi, se si vuole ottenere la stessa transizione in entrata/uscita, è sufficiente indicarla nello stato dell'elemento NON in hover. MA se si vuole ottenere due transizioni diverse in/out, è necessario inserire ANCHE una transition nello pseudo-selettore con :hover, ma attenzione! Ora la transizione iniziale verrà applicata in USCITA, mentre quella inserita nello stato di hover diventerà quella in ENTRATA*/
+
+.box-6 {
+  background-color: violet;
+  transition: all 2s linear 0s;
+}
+
+.box-6:hover {
+  width: 50px;
+  height: 50px;
+  transform: translateX(50px);
+}
+
+.box-7 {
+  background-color: mediumvioletred;
+  transition: all 2s linear 0s;
+}
+
+.box-7:hover {
+  opacity: 0;
+}

@@ -29,6 +29,8 @@ body {
   color: white;
   transform: scale(1.35);
   /* applica un fattore di scala sull'elemento, valori > 1 lo ingrandiranno, valori < 1 lo rimpiccioliranno */
+  /* transform-origin: top left; */
+  /* transform-origin sposta l'origine della trasformazione, che normalmente sarebbe il centro esatto del div */
 }
 
 .translate {
