@@ -1,0 +1,46 @@
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande',
+    'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.box {
+  width: 150px;
+  height: 150px;
+  /* centro la scritta dentro */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.rotate {
+  background-color: orange;
+  transform: rotate(50deg);
+  /* valori positivi ruotano l'elemento in senso ORARIO, valori negativi in senso antiorario */
+}
+
+.skew {
+  background-color: green;
+  transform: skew(306deg, 3deg);
+  /* storge l'elemento tirando o accorciando le due coppie di vertici */
+}
+
+.scale {
+  background-color: blue;
+  color: white;
+  transform: scale(1.35);
+  /* applica un fattore di scala sull'elemento, valori > 1 lo ingrandiranno, valori < 1 lo rimpiccioliranno */
+}
+
+.translate {
+  background-color: darkcyan;
+  transform: translate(55px, -50px);
+}
+
+.margin {
+  margin-top: 2em;
+}
+
+.multiple {
+  background-color: tan;
+  transform: translate(298px, -69px) scale(1.1) rotate(50deg);
+}
